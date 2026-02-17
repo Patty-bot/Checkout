@@ -1,0 +1,70 @@
+{
+  "checkout": {
+    "title": "Pago",
+    "steps": {
+      "account": "Cuenta",
+      "shipping": "Envío",
+      "payment": "Pago"
+    },
+    "orderSummary": "Resumen del Pedido",
+    "buttons": {
+      "next": "Siguiente",
+      "back": "Atrás",
+      "continue": "Continuar",
+      "completeOrder": "Completar Pedido"
+    },
+    "account": {
+      "title": "Información de la Cuenta",
+      "email": "Dirección de Correo",
+      "emailPlaceholder": "tu@ejemplo.com",
+      "password": "Contraseña",
+      "passwordPlaceholder": "Al menos 8 caracteres",
+      "passwordHint": "Mínimo 8 caracteres"
+    },
+    "shipping": {
+      "title": "Dirección de Envío",
+      "addressLine1": "Línea de Dirección 1",
+      "addressLine1Placeholder": "Número o nombre de casa",
+      "streetName": "Nombre de la Calle",
+      "streetNamePlaceholder": "Nombre de la calle",
+      "postcode": "Código Postal",
+      "postcodePlaceholder": "Código postal",
+      "shippingMethod": "Método de Envío",
+      "standard": "Estándar (5-7 días)",
+      "express": "Rápido (2-3 días)",
+      "overnight": "Envío Nocturno (Próximo día)"
+    },
+    "payment": {
+      "title": "Información de Pago",
+      "nameOnCard": "Nombre en la Tarjeta",
+      "nameOnCardPlaceholder": "Nombre completo",
+      "cardNumber": "Número de Tarjeta",
+      "cardNumberPlaceholder": "1234 5678 9012 3456",
+      "expirationMonth": "Mes de Vencimiento",
+      "expirationYear": "Año de Vencimiento",
+      "cvc": "CVC",
+      "cvcPlaceholder": "123"
+    },
+    "validation": {
+      "required": "Este campo es obligatorio",
+      "invalidEmail": "Por favor ingrese un correo válido",
+      "passwordTooShort": "La contraseña debe tener al menos 8 caracteres",
+      "invalidCardNumber": "Por favor ingrese un número de tarjeta válido",
+      "invalidCVC": "El CVC debe tener 3-4 dígitos"
+    },
+    "errors": {
+      "accountError": "Error al validar la cuenta",
+      "shippingError": "Error al validar la dirección de envío",
+      "paymentError": "Error al procesar el pago",
+      "orderError": "Error al completar el pedido"
+    },
+    "success": {
+      "orderComplete": "¡Pedido completado con éxito!",
+      "orderId": "ID del Pedido"
+    }
+  },
+  "currency": {
+    "USD": "USD",
+    "symbol": "$"
+  }
+}

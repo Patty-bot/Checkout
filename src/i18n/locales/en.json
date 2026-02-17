@@ -1,0 +1,70 @@
+{
+  "checkout": {
+    "title": "Checkout",
+    "steps": {
+      "account": "Account",
+      "shipping": "Shipping",
+      "payment": "Payment"
+    },
+    "orderSummary": "Order Summary",
+    "buttons": {
+      "next": "Next",
+      "back": "Back",
+      "continue": "Continue",
+      "completeOrder": "Complete Order"
+    },
+    "account": {
+      "title": "Account Information",
+      "email": "Email Address",
+      "emailPlaceholder": "you@example.com",
+      "password": "Password",
+      "passwordPlaceholder": "At least 8 characters",
+      "passwordHint": "Minimum 8 characters"
+    },
+    "shipping": {
+      "title": "Shipping Address",
+      "addressLine1": "Address Line 1",
+      "addressLine1Placeholder": "House number or name",
+      "streetName": "Street Name",
+      "streetNamePlaceholder": "Street name",
+      "postcode": "Postcode",
+      "postcodePlaceholder": "Postal code",
+      "shippingMethod": "Shipping Method",
+      "standard": "Standard (5-7 days)",
+      "express": "Express (2-3 days)",
+      "overnight": "Overnight (Next day)"
+    },
+    "payment": {
+      "title": "Payment Information",
+      "nameOnCard": "Name on Card",
+      "nameOnCardPlaceholder": "Full name",
+      "cardNumber": "Card Number",
+      "cardNumberPlaceholder": "1234 5678 9012 3456",
+      "expirationMonth": "Expiration Month",
+      "expirationYear": "Expiration Year",
+      "cvc": "CVC",
+      "cvcPlaceholder": "123"
+    },
+    "validation": {
+      "required": "This field is required",
+      "invalidEmail": "Please enter a valid email address",
+      "passwordTooShort": "Password must be at least 8 characters",
+      "invalidCardNumber": "Please enter a valid card number",
+      "invalidCVC": "CVC must be 3-4 digits"
+    },
+    "errors": {
+      "accountError": "Failed to validate account",
+      "shippingError": "Failed to validate shipping address",
+      "paymentError": "Failed to process payment",
+      "orderError": "Failed to complete order"
+    },
+    "success": {
+      "orderComplete": "Order completed successfully!",
+      "orderId": "Order ID"
+    }
+  },
+  "currency": {
+    "USD": "USD",
+    "symbol": "$"
+  }
+}
