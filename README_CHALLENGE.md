@@ -2,25 +2,25 @@
 
 A fully functional, production-ready checkout flow application built with **Next.js 16**, **TypeScript**, **React Hook Form**, **Zod validation**, and **i18n support** (English & Spanish).
 
-## 🎯 Objective
+## Objective
 
-Implement a 3-step checkout flow with account verification, shipping address, and payment information collection. This solution demonstrates:
+We implemented a 3-step checkout flow with account verification, shipping address, and payment information collection. This solution demonstrates:
 
-- ✅ **UI Implementation Fidelity** - Responsive design matching Figma specifications
-- ✅ **API Integration** - Dummy backend using Next.js API routes
-- ✅ **Form Validation** - Client-side validation with inline error messages
-- ✅ **Internationalization** - Support for multiple languages (EN/ES)
-- ✅ **State Management** - Proper form data persistence across steps
-- ✅ **Loading & Error States** - Comprehensive UX feedback
-- ✅ **Testing** - Integration test for happy path checkout flow
+- **UI Implementation Fidelity** - Responsive design matching Figma specifications
+- **API Integration** - Dummy backend using Next.js API routes
+- **Form Validation** - Client-side validation with inline error messages
+- **Internationalization** - Support for multiple languages (EN/ES)
+- **State Management** - Proper form data persistence across steps
+- **Loading & Error States** - Comprehensive UX feedback
+- **Testing** - Integration test for happy path checkout flow
 
-## 📋 Features Implemented
+## Features Implemented
 
 ### 1. **3-Step Checkout Flow**
 
 #### Step 1: Account
-- Email input (required, valid email format)
-- Password input (required, min 8 characters)
+- Email input (required, valid email format) // you can input any email as long as it meets the requirement of an email.
+- Password input (required, min 8 characters) // input any password but follow the rule of 8 characters.
 - Inline validation with error messages
 - Form data persistence
 
@@ -144,7 +144,7 @@ POST /api/checkout/complete
 - Touch-friendly button sizing
 - Accessible form inputs
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework:** Next.js 16 (App Router)
 - **Language:** TypeScript
@@ -155,7 +155,7 @@ POST /api/checkout/complete
 - **Testing:** Jest v30 + Testing Library v16
 - **Package Manager:** pnpm
 
-## 📦 Installation & Setup
+## Installation & Setup
 
 ### Prerequisites
 
@@ -240,7 +240,6 @@ Validates account credentials.
 ```json
 {
   "success": true,
-  "message": "Account verified successfully",
   "accountId": "acc_1234567890"
 }
 ```
@@ -323,7 +322,7 @@ Completes the order with account, shipping, and payment IDs.
 }
 ```
 
-## 🧪 Testing
+## Testing
 
 ### Test Coverage
 
@@ -332,12 +331,12 @@ The application includes an integration test for the **happy path** checkout flo
 **Test File:** `__tests__/checkout.happy-path.test.tsx`
 
 **What's Tested:**
-1. ✅ Account step validation and submission
-2. ✅ Shipping step data entry and submission
-3. ✅ Payment step data entry and submission
-4. ✅ Order completion and success message
-5. ✅ Navigation back through steps with data preservation
-6. ✅ API integration with mocked endpoints
+1. Account step validation and submission
+2. Shipping step data entry and submission
+3. Payment step data entry and submission
+4. Order completion and success message
+5. Navigation back through steps with data preservation
+6. API integration with mocked endpoints
 
 **Run Tests:**
 ```bash
@@ -369,7 +368,7 @@ pnpm test:watch
 - Try postcode: `00000` → API returns error
 - Try card: `4000000000000002` → API returns declined error
 
-## 🌍 Internationalization (i18n)
+## Internationalization (i18n)
 
 ### Language Switcher
 
@@ -395,7 +394,7 @@ new Intl.NumberFormat('en-US', {
 }).format(amount);
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -437,7 +436,7 @@ jest.setup.js         # Jest setup file
 package.json          # Dependencies and scripts
 ```
 
-## 🚀 Performance Optimizations
+## Performance Optimizations
 
 - **Code Splitting:** Components are lazy-loaded via Next.js
 - **Image Optimization:** Tailwind CSS for minimal bundle
@@ -445,17 +444,17 @@ package.json          # Dependencies and scripts
 - **Form Optimization:** useForm with efficient re-renders
 - **Caching:** Order summary fetched once per session
 
-## ♿ Accessibility
+## Accessibility
 
-- ✅ Semantic HTML elements
-- ✅ Proper label associations with inputs
-- ✅ ARIA labels and descriptions
-- ✅ Keyboard navigation support
-- ✅ Focus management in forms
-- ✅ Color contrast compliance
-- ✅ Error message associations
+- Semantic HTML elements
+- Proper label associations with inputs
+- ARIA labels and descriptions
+- Keyboard navigation support
+- Focus management in forms
+- Color contrast compliance
+- Error message associations
 
-## 🔒 Security Considerations
+## Security Considerations
 
 - **Client-side Validation:** Prevents invalid submissions
 - **Server-side Validation:** Validates all inputs
@@ -463,12 +462,12 @@ package.json          # Dependencies and scripts
 - **Error Message Sanitization:** Generic messages to users
 - **HTTPS Ready:** Production deployment ready
 
-## 📝 Assumptions & Tradeoffs
+## Assumptions & Tradeoffs
 
 ### Assumptions Made
 
-1. **Mock Payment:** This is a demonstration; uses mock card data
-2. **No Database:** Order data is ephemeral (demo only)
+1. **Mock Payment:** dummy cards used only
+2. **No Database:** Order data used is not stored
 3. **Single Session:** No persistent user accounts
 4. **No Analytics:** No tracking/analytics implemented
 5. **No Email Verification:** Email validation is format only
@@ -476,51 +475,41 @@ package.json          # Dependencies and scripts
 
 ### Tradeoffs
 
-1. **i18n Scope:** Only EN/ES; easily extensible to more languages
+1. **i18n Scope:** Only EN/ES
 2. **Error Recovery:** Users must restart flow on critical errors
 3. **Shipping Methods:** Limited to 3 options (extensible)
 4. **Card Validation:** Basic format check only (use Stripe in production)
 5. **Testing:** Happy path only (extensible to error scenarios)
 
-## 🎓 Scoring Rubric Alignment
-
-| Category | Implementation |
-|----------|-----------------|
-| **Design Fidelity & Responsiveness (35%)** | 2-column desktop layout, single-column mobile, step indicator, order summary |
-| **API Route Design & Integration (25%)** | 5 endpoints, proper validation, latency simulation, error handling |
-| **Form Flow & Validation (20%)** | Zod schemas, inline errors, progression blocking, data persistence |
-| **i18n Correctness (10%)** | EN/ES support, currency formatting, complete localization |
-| **Code Quality & Documentation (10%)** | Clean TypeScript, component separation, comprehensive README |
-
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Issue: Build fails with TypeScript errors
 ```bash
-# Clear Next.js cache
+# Clearing Next.js cache
 rm -rf .next
 pnpm build
 ```
 
 ### Issue: i18n not loading translations
 ```bash
-# Ensure i18n config is imported in providers.tsx
-# Check translation file paths in src/i18n/locales/
+# Ensuring i18n config is imported in providers.tsx
+# Checking translation file paths in src/i18n/locales/
 ```
 
 ### Issue: Tests not running
 ```bash
-# Reinstall jest and testing libraries
+# Reinstalling jest and testing libraries
 pnpm add -D jest @testing-library/react @testing-library/jest-dom
 ```
 
 ### Issue: Tailwind CSS not applied
 ```bash
-# Rebuild cache
+# Rebuilding cache
 rm -rf .next
 pnpm dev
 ```
 
-## 📞 Support
+## In case of any support that might be needed
 
 For issues or questions about the implementation:
 1. Check the troubleshooting section above
@@ -528,12 +517,8 @@ For issues or questions about the implementation:
 3. Inspect browser console for errors
 4. Check network tab in DevTools for API calls
 
-## 📄 License
+## License
 
-This project is provided as-is for interview/demonstration purposes.
+I created this project for interview/demonstration purposes only.
 
 ---
-
-**Project Status:** ✅ **Complete & Production Ready**
-
-Built with care for code quality, user experience, and maintainability.
